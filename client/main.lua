@@ -193,7 +193,7 @@ AddEventHandler('wf-alerts:clNotify', function(pData)
 	if pData ~= nil then
 		local sendit = false
 		for i=1, #pData.recipientList do
-			if pData.recipientList[i] == PlayerData.job.name then sendit = true break end
+			if pData.recipientList[i] == PlayerData.job.name and PlayerData.job.onduty then sendit = true break end
 		end
 		if sendit then
 			Citizen.Wait(1500)
