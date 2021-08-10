@@ -53,6 +53,9 @@ local dispatchCodes = {
 	autotheft = {displayCode = '10-66', description = _U('autotheft'), isImportant = 0, recipientList = {'police'},
 	blipSprite = 651, blipColour = 84, blipScale = 1.5, infoM = 'fa-car', infoM2 = 'fa-palette' },
 
+	autotheftgunpoint = {displayCode = '10-66', description = 'Auto Theft at Gunpoint', isImportant = 0, recipientList = {'police'},
+	blipSprite = 651, blipColour = 84, blipScale = 1.5, infoM = 'fa-car', infoM2 = 'fa-palette' },
+
 	speeding = {displayCode = '10-66', description = _U('speeding'), isImportant = 0, recipientList = {'police'},
 	blipSprite = 650, blipColour = 84, blipScale = 1.5, infoM = 'fa-car', infoM2 = 'fa-palette' },
 
