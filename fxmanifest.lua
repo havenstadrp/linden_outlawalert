@@ -24,6 +24,7 @@ files {
 	'html/style.css',
 }
 
+export "vehicleData"        -- exports['linden_outlawalert']:vehicleData(vehicle)
 export "getSpeed"           -- exports['linden_outlawalert']:getSpeed
 export "getStreet"          -- exports['linden_outlawalert']:getStreet
 export "zoneChance"         -- exports['linden_outlawalert']:zoneChance('Custom', 2)

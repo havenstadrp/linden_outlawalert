@@ -193,11 +193,11 @@ AddEventHandler('wf-alerts:clNotify', function(pData)
 	if pData ~= nil then
 		local sendit = false
 		for i=1, #pData.recipientList do
-			if pData.recipientList[i] == PlayerData.job.name then sendit = true break end
+			if pData.recipientList[i] == PlayerData.job.name and PlayerData.job.onduty then sendit = true break end
 		end
 		if sendit then
 			Citizen.Wait(1500)
-			if not pData.length then pData.length = 4000 end
+			if not pData.length then pData.length = 10000 end
 			pData.street = getStreetandZone(vector3(pData.coords.x, pData.coords.y, pData.coords.z))
 			SendNUIMessage({action = 'display', info = pData, job = PlayerData.job.name, length = pData.length})
 			PlaySound(-1, "Event_Message_Purple", "GTAO_FM_Events_Soundset", 0, 0, 1)
@@ -332,7 +332,7 @@ RegisterCommand('alert_dead', function()
 			canSendDistress = true
 		elseif Config.Enable.PlayerDowned then
 			Citizen.Wait(2000)
-			data = {dispatchCode = 'persondown', _U('caller_local'), coords = playerCoords, netId = netId, length = 8000}
+			data = {dispatchCode = 'persondown', _U('caller_local'), coords = playerCoords, netId = netId, length = 10000}
 			TriggerServerEvent('wf-alerts:svNotify', data)
 			Citizen.Wait(20000)
 			canSendDistress = true
