@@ -3,7 +3,7 @@ Config.Enable = {}
 Config.Timer = {}
 
 ---------------------------------------------------------------
-Config.Locale = 'en'
+Config.Locale = 'nl'
 Config.CheckVersion = false
 Config.CheckVersionDelay = 60 -- Minutes
 
