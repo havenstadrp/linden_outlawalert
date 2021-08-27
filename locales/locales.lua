@@ -65,6 +65,7 @@ Locales = {
         ['officerdown'] = "Officier is neer",
         ['persondown'] = "Persoon is gewond",
     },
+    
     ['fr'] = {
         ['unknown_caller'] = "Appelant inconnu",
         ['caller_unknown'] = "Inconnu",
